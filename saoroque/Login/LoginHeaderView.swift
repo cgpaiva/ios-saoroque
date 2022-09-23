@@ -25,11 +25,14 @@ struct LoginHeaderView: View {
                     .frame(maxWidth: 250)
                 
                 VStack(alignment: .center) {
-                    CustomInputText(bindingText: $email, placeHolderText: "Digite seu e-mail")
+                    CustomInputText(bindingText: $email, placeHolderText: "Digite seu e-mail", keyboardType: .emailAddress)
                         .padding([.trailing, .leading], 30)
                         .padding(.top, 80)
                     
-                    CustomSecureInputText(bindingText: $password, placeHolderText: "Digite sua senha")
+                    CustomSecureInputText(
+                        bindingText: $password,
+                        placeHolderText: "Digite sua senha",
+                        keyboardType: .numberPad)
                         .padding([.trailing, .leading], 30)
                         .padding(.top, 20)
                     
